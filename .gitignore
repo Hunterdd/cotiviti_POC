@@ -1,0 +1,17 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Caches and logs
+.pytest_cache/
+.DS_Store
+
+# Local environments / secrets
+.env
+.venv/
+venv/
+
+# Local LLM cache files
+data/cache/

@@ -1,0 +1,66 @@
+[
+  {
+    "rule_id": "R001",
+    "description": "RPM services may only be furnished to established patients who have received professional services from the billing practitioner or a same-specialty practitioner in the same group within the last 3 years. New patients must complete an E/M visit before initiating RPM.",
+    "applicable_codes": [
+      "99453",
+      "99454",
+      "99457",
+      "99458"
+    ],
+    "conditions": [
+      "Patient must be an established patient (received services from billing practitioner or same-specialty practitioner in same group within last 3 years).",
+      "New patients must complete an Evaluation and Management (E/M) visit before RPM can be initiated.",
+      "Patients who initiated RPM during the PHE are grandfathered as established patients."
+    ],
+    "source_citation": "Rule R001 \u2014 Patient Eligibility \u2014 Established Patient Requirement"
+  },
+  {
+    "rule_id": "R002",
+    "description": "To bill CPT codes 99453 and 99454, the practitioner must collect physiologic data for a minimum of 16 days in a 30-day billing period. This requirement does not apply to treatment management codes 99457 and 99458.",
+    "applicable_codes": [
+      "99453",
+      "99454"
+    ],
+    "conditions": [
+      "Physiologic data must be collected for a minimum of 16 days in a 30-day billing period."
+    ],
+    "source_citation": "Rule R002 \u2014 Minimum Data Collection Days"
+  },
+  {
+    "rule_id": "R003",
+    "description": "Only one practitioner may bill RPM codes per patient during a 30-day period, even if multiple medical devices are in use.",
+    "applicable_codes": [
+      "99454",
+      "99457",
+      "99458"
+    ],
+    "conditions": [
+      "Only one practitioner may bill RPM codes per patient per 30-day period."
+    ],
+    "source_citation": "Rule R003 \u2014 Billing Frequency \u2014 One Practitioner Per Period"
+  },
+  {
+    "rule_id": "R004",
+    "description": "RPM and RTM may not be billed together for the same patient in the same 30-day period. Practitioners must choose one monitoring type per billing period.",
+    "applicable_codes": [
+      "99457",
+      "99458"
+    ],
+    "conditions": [
+      "RPM and RTM cannot be billed together for the same patient in the same 30-day period."
+    ],
+    "source_citation": "Rule R004 \u2014 RPM and RTM Concurrent Billing"
+  },
+  {
+    "rule_id": "R005",
+    "description": "RHCs and FQHCs are eligible to bill for RPM services under HCPCS code G0511, requiring a minimum of 20 minutes of qualifying non-face-to-face RPM services furnished during a calendar month.",
+    "applicable_codes": [
+      "G0511"
+    ],
+    "conditions": [
+      "At least 20 minutes of qualifying non-face-to-face RPM services must be furnished during a calendar month."
+    ],
+    "source_citation": "Rule R005 \u2014 Rural Health Clinics (RHCs) and FQHCs \u2014 Billing Eligibility"
+  }
+]

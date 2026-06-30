@@ -1,0 +1,72 @@
+[
+  {
+    "rule_id": "R001",
+    "description": "During the COVID-19 PHE through Dec 31, 2023, RPM services may be provided to both new and established patients without requiring a prior face-to-face visit. Practitioners can initiate RPM for any patient with an acute or chronic condition that warrants monitoring.",
+    "applicable_codes": [
+      "99453",
+      "99454",
+      "99457",
+      "99458"
+    ],
+    "conditions": [
+      "Patient may be new or established (no prior face-to-face visit required during this period)",
+      "Patient must have an acute or chronic condition that warrants monitoring"
+    ],
+    "source_citation": "Rule R001 \u2014 Patient Eligibility \u2014 Established Patient Requirement"
+  },
+  {
+    "rule_id": "R002",
+    "description": "To bill CPT codes 99454, 99457, and 99458, physiologic data must be collected for a minimum of 2 days in a 30-day period for patients with confirmed or suspected COVID-19, and a minimum of 16 days for all other patients. The 16-day minimum does not apply to treatment management codes 99457 and 99458 during the PHE flexibility period.",
+    "applicable_codes": [
+      "99454",
+      "99457",
+      "99458"
+    ],
+    "conditions": [
+      "For patients with confirmed or suspected COVID-19: minimum 2 days of data collection in a 30-day billing period",
+      "For all other patients: minimum 16 days of data collection in a 30-day billing period",
+      "The 16-day requirement does not apply to codes 99457 and 99458 during the PHE flexibility period"
+    ],
+    "source_citation": "Rule R002 \u2014 Minimum Data Collection Days"
+  },
+  {
+    "rule_id": "R003",
+    "description": "Only one practitioner may bill RPM codes per patient during any 30-day period. Even if multiple medical devices are in use, RPM services are billed only once per patient per 30-day period.",
+    "applicable_codes": [
+      "99454",
+      "99457",
+      "99458"
+    ],
+    "conditions": [
+      "Only one practitioner can bill RPM codes for a given patient in a 30-day period",
+      "RPM services are billed once per patient per 30-day period regardless of number of devices"
+    ],
+    "source_citation": "Rule R003 \u2014 Billing Frequency \u2014 One Practitioner Per Period"
+  },
+  {
+    "rule_id": "R004",
+    "description": "RPM (remote physiologic monitoring) and RTM (remote therapeutic monitoring) may not be billed together for the same patient in the same 30-day period. Practitioners must choose one monitoring type per billing period.",
+    "applicable_codes": [
+      "99457",
+      "99458"
+    ],
+    "conditions": [
+      "RPM and RTM cannot be billed concurrently for the same patient in the same 30-day period",
+      "Practitioner must select either RPM or RTM for the billing period"
+    ],
+    "source_citation": "Rule R004 \u2014 RPM and RTM Concurrent Billing"
+  },
+  {
+    "rule_id": "R005",
+    "description": "Rural Health Clinics (RHCs) and Federally Qualified Health Centers (FQHCs) are not eligible to separately bill RPM services under CPT codes 99453\u201399458. RPM services provided in these settings are bundled into the all-inclusive rate or prospective payment system and cannot be separately claimed.",
+    "applicable_codes": [
+      "99453",
+      "99454"
+    ],
+    "conditions": [
+      "RHCs and FQHCs cannot separately bill RPM codes 99453\u201399458",
+      "RPM services are bundled into the all-inclusive rate or prospective payment system for these facilities"
+    ],
+    "source_citation": "Rule R005 \u2014 Rural Health Clinics (RHCs) and FQHCs \u2014 Billing Eligibility"
+  }
+]

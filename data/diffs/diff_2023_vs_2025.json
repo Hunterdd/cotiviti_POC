@@ -1,0 +1,31 @@
+{
+  "added": [],
+  "removed": [],
+  "tightened": [
+    {
+      "rule_id_old": "R001",
+      "rule_id_new": "R001",
+      "what_changed": "2023 allowed RPM for new and established patients without prior face-to-face during PHE; 2025 requires established patient relationship (services within last 3 years) or new patient must complete an E/M visit. Grandfathering for PHE patients is added, but overall eligibility is more restrictive.",
+      "impact": "Claims for new patients without a prior E/M visit within the billing practitioner's practice will be denied. Fewer patients qualify for RPM initiation compared to the PHE period."
+    },
+    {
+      "rule_id_old": "R002",
+      "rule_id_new": "R002",
+      "what_changed": "2023 had a lower 2-day data collection minimum for COVID-19 patients and the 16-day minimum did not apply to 99457/99458 during PHE. 2025 removes the COVID-19 exception entirely, requires 16 days of data for both 99453 and 99454, and permanently exempts 99457/99458 from the minimum.",
+      "impact": "Claims for COVID-19 patients now require 16 days of data collection (previously 2), reducing approval rates. Also, 99453 now has an explicit 16-day requirement, potentially leading to denials for early billing. The permanent exemption for treatment management codes remains unchanged."
+    }
+  ],
+  "loosened": [
+    {
+      "rule_id_old": "R005",
+      "rule_id_new": "R005",
+      "what_changed": "2023 prohibited RHCs and FQHCs from separately billing RPM codes (bundled into all-inclusive rate). 2025 allows these facilities to bill under HCPCS G0511 with a 20-minute minimum of qualifying non-face-to-face RPM services per month.",
+      "impact": "RHCs and FQHCs can now submit separate claims for RPM services under G0511, increasing reimbursement opportunities. Claims meeting the 20-minute threshold will be payable, whereas previously no separate RPM payment was available."
+    }
+  ],
+  "unchanged": [
+    "R003",
+    "R004"
+  ],
+  "summary": "The 2025 policy tightens patient eligibility by ending the COVID-19 PHE flexibility; now only established patients or those completing a prior E/M visit can initiate RPM. Data collection minimums are unified at 16 days for all patients, removing the lower COVID-19 threshold. However, RHCs and FQHCs gain the ability to bill RPM under a new code, expanding access for rural and community health centers. The rules on single-practitioner billing and RPM/RTM exclusivity remain unchanged."
+}
