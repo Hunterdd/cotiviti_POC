@@ -12,7 +12,7 @@
 
 | Deliverable | File | Description |
 |---|---|---|
-| 📄 Written Report | [Report.docx](./Report.docx) | Two-page Word report on Content Management in Health Care with bibliography |
+| 📄 Written Report | [Report.pdf](./Report.pdf) | Two-page Word report on Content Management in Health Care with bibliography |
 | 📊 Slide Presentation | [Cotiviti-POC..pptx](./Cotiviti-POC..pptx) | PowerPoint overview of the report and POC demo |
 | 🎥 Video Recording | [video1382756422.mp4](./video1382756422.mp4) | Recorded walkthrough of the presentation and live POC screenshare |
 | 💻 POC Demo Code | This repository | Streamlit app + 3-agent pipeline (see setup below) |
