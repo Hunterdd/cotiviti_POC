@@ -1,8 +1,52 @@
-# Policy Audit Assistant
+# Cotiviti Intern Submission — Policy Audit Assistant
 
-A 3-agent AI pipeline for CMS Remote Patient Monitoring policy ingestion, version diffing, and claim auditing.
+**Topic:** Content Management in Health Care
+**Candidate:** Dhruv
+**Submission Type:** Cotiviti Intern Technical Screening
 
-## Stack
+> A 3-agent AI pipeline for CMS Remote Patient Monitoring (RPM) policy ingestion, version diffing, and claim auditing — built as a Proof of Concept for the Cotiviti Intern screening.
+
+---
+
+## 📦 Deliverables
+
+| Deliverable | File | Description |
+|---|---|---|
+| 📄 Written Report | [Report.docx](./Report.docx) | Two-page Word report on Content Management in Health Care with bibliography |
+| 📊 Slide Presentation | [Cotiviti-POC..pptx](./Cotiviti-POC..pptx) | PowerPoint overview of the report and POC demo |
+| 🎥 Video Recording | [video1382756422.mp4](./video1382756422.mp4) | Recorded walkthrough of the presentation and live POC screenshare |
+| 💻 POC Demo Code | This repository | Streamlit app + 3-agent pipeline (see setup below) |
+
+---
+
+## 🧠 Topic: Content Management in Health Care
+
+This POC addresses **Topic 3: Content Management in Health Care**, focusing on:
+
+- **Billing and Coding Policies** — ingesting CMS Remote Patient Monitoring PDFs
+- **Summarization of Content** — extracting structured rules from policy documents via LLM
+- **Comparison of Content Changes** — diffing policy versions to surface tightened, loosened, added, or removed rules
+- **Conversion of Written Policy into Rules** — translating natural-language policy text into machine-auditable JSON rule sets used to evaluate real claims
+
+---
+
+## 🏗️ POC Architecture: 3-Agent Pipeline
+
+```
+PDF Policy (CMS RPM)
+       │
+       ▼
+[Agent 1 — Extractor]  →  Structured rules JSON
+       │
+       ▼
+[Agent 2 — Differ]     →  Version diff report (added / removed / tightened / loosened)
+       │
+       ▼
+[Agent 3 — Auditor]    →  Claim decision (approved / denied + citations + rationale)
+```
+---
+
+## 🛠️ Stack
 
 | Layer | Tool | Why |
 |---|---|---|
@@ -10,16 +54,15 @@ A 3-agent AI pipeline for CMS Remote Patient Monitoring policy ingestion, versio
 | LLM | OpenRouter → DeepSeek | Flexible model routing, cost-efficient |
 | Storage | JSON files | Versioned, auditable, human-readable |
 | UI | Streamlit | Python-native, fast to demo |
-
-> **On LangChain / vector DBs**: Deliberately excluded. Every step is transparent and readable in under 10 minutes — which matters in a regulated healthcare context where auditability is non-negotiable.
+| AI Coding Assistant | Claude Code (Anthropic) | Used to scaffold, iterate, and debug the POC codebase |
 
 ---
 
-## Setup
+## ⚙️ Setup
 
 ```bash
 # 1. Clone / open the project
-cd cotiviti
+cd project_folder
 
 # 2. Create venv and install dependencies
 bash setup.sh
@@ -37,7 +80,7 @@ streamlit run app.py
 
 ---
 
-## Environment Variables (`.env`)
+## 🔑 Environment Variables (`.env`)
 
 | Variable | Default | Description |
 |---|---|---|
@@ -51,32 +94,36 @@ MODEL=deepseek/deepseek-r1
 
 ---
 
-## Project Structure
+## 📁 Project Structure
 
 ```
 cotiviti/
-├── .env.example            ← copy to .env
-├── requirements.txt        ← 4 dependencies
-├── setup.sh                ← one-command venv setup
+├── Report.docx                 ← Written report (deliverable)
+├── Cotiviti-POC..pptx          ← Slide presentation (deliverable)
+├── video1382756422.mp4         ← Video recording (deliverable)
+│
+├── .env.example                ← copy to .env
+├── requirements.txt            ← 4 dependencies
+├── setup.sh                    ← one-command venv setup
 │
 ├── src/
-│   ├── extractor.py        ← Agent 1: PDF → rules JSON
-│   ├── differ.py           ← Agent 2: rules v1 + v2 → diff report
-│   └── auditor.py          ← Agent 3: claim + rules → decision
+│   ├── extractor.py            ← Agent 1: PDF → rules JSON
+│   ├── differ.py               ← Agent 2: rules v1 + v2 → diff report
+│   └── auditor.py              ← Agent 3: claim + rules → decision
 │
 ├── data/
-│   ├── policies/           ← PDF inputs
-│   ├── rules/              ← extracted rules (auto-created)
-│   ├── diffs/              ← diff reports (auto-created)
+│   ├── policies/               ← PDF inputs
+│   ├── rules/                  ← extracted rules (auto-created)
+│   ├── diffs/                  ← diff reports (auto-created)
 │   └── claims/
 │       └── test_claims.json
 │
-└── app.py                  ← Streamlit UI
+└── app.py                      ← Streamlit UI
 ```
 
 ---
 
-## Agents
+## 🤖 Agents
 
 ### `extractor.py`
 - **Input:** PDF file path
@@ -105,15 +152,3 @@ python src/auditor.py data/claims/test_claims.json data/rules/rules_2025.json
 ```
 
 ---
-
-## Test Claims
-
-`data/claims/test_claims.json` contains 5 synthetic RPM claims:
-
-| Claim | Scenario |
-|---|---|
-| CLM-001 | Clean approval — all conditions met |
-| CLM-002 | Missing physician order, insufficient monitoring days |
-| CLM-003 | Missing care plan documentation |
-| CLM-004 | Dual additional billing sessions |
-| CLM-005 | Non-FDA-cleared consumer device |
