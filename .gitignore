@@ -15,3 +15,5 @@ venv/
 
 # Local LLM cache files
 data/cache/
+
+*.docx
